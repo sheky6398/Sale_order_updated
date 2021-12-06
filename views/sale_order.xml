@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="sale_order_view_form">
+        <field name="name">sale.order.view.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='amount_total']" position="after">
+                <label for="total_weighted"/>           
+                <field name="total_weighted"  nolabel="1" class="oe_subtotal_footer_separator"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
